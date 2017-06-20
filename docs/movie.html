@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>360 Video</title>
 	<meta name="description" content="360 Video ? A-Frame">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<script src="../../../dist/aframe-master.js"></script>
 	<script>
 	document.addEventListener("DOMContentLoaded", function(){
@@ -18,6 +19,7 @@
 	</script>
 	</head>
 	<body>
+		<button id="play-button">Play</button>
 		<a-scene>
 			<a-assets>
 				<video id="video" src="https://www.youtube.com/embed/vluoggq_3WU" autoplay loop crossorigin></video>

@@ -5,6 +5,7 @@
 		<title>360 Video</title>
 		<meta name="description" content="360 Video ? A-Frame">
 		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 		
 		
@@ -23,13 +24,13 @@
 		</style>
 		
 		<script>
-		document.addEventListener("DOMContentLoaded", 
-		function()
-		{
-			var vid = document.getElementById('video');
+		$(function(){
+		    // é¿çsÇµÇΩÇ¢èàóù
+		    var vid = document.getElementById('video');
 			console.log(vid);
 			vid.play();
-		}, false);
+		});
+			
 		</script>
 	</head>
 	<body>

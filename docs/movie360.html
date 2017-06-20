@@ -26,16 +26,12 @@
 		document.addEventListener("DOMContentLoaded", function(){
 			var vid = document.getElementById('video');
 			console.log(vid);
-			
-			document.getElementById('play-button').addEventListener("click", function(e){
-			  this.style.display = 'none';
-			  vid.play();
-			}, false);
+			vid.play();
+
 			}, false);
 		</script>
 	</head>
 	<body>
-		<button id="play-button">Play</button>
 		<a-scene>
 			<a-assets>
 			<video id="video" src="./assets/mov_tokugawaen.mp4" autoplay loop="true" crossorigin></video>

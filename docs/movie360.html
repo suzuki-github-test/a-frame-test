@@ -5,7 +5,6 @@
 		<title>360 Video</title>
 		<meta name="description" content="360 Video ? A-Frame">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 		
 		
@@ -17,21 +16,33 @@
 			position: fixed;
 			top: calc(50% - 1em);
 			left: calc(50% - 2em);
-			width: 4em;
-			height: 2em;
+			width: auto;
+			padding:0;
+			margin:0;
+			background:none;
+			border:0;
+			font-size:0;
+			line-height:0;
+			overflow:visible;
+			cursor:pointer;
 			z-index: 10;
 		}
 		</style>
 		
 		<script>
-		$(function(){
-		    // 
-			#('#video').play();
-		});
+		document.addEventListener("DOMContentLoaded", function(){
+			var vid = document.getElementById('video');
+			console.log(vid);
 			
+			document.getElementById('play-button').addEventListener("click", function(e){
+			  this.style.display = 'none';
+			  vid.play();
+			}, false);
+			}, false);
 		</script>
 	</head>
 	<body>
+		<button id="play-button"><img src="./img/play.png"></button>
 		<a-scene>
 			<a-assets>
 			<video id="video" src="./assets/mov_tokugawaen.mp4" autoplay loop="true" crossorigin></video>

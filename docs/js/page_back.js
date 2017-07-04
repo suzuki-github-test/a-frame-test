@@ -3,7 +3,10 @@ AFRAME.registerComponent
 	{
 		init: function () 
 		{
-			history.back();
+			this.el.addEventListener("click",function()
+			{ 
+				history.back();
+			});
 		}
 	}
 );

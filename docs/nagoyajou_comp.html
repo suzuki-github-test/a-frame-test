@@ -16,6 +16,7 @@
 		<a-scene>
 			<a-assets>
 				<img id="nagoyajou" crossorigin="anonymous" src="./img/nagoyajou.jpg">
+				<img id="navi_back" crossorigin="anonymous" src="./img/navi_back.jpg">
 
 				<script id="link" type="text/html">
 					<a-entity class="link"
@@ -28,9 +29,11 @@
 					page_back ></a-entity>
 				</script>
 			</a-assets>
-			
-			<a-entity template="src: #link" position="0 -1 -4" data-thumb="#nagoyajou"></a-entity>
-			
+
+			<a-sky id="image-360"  src="#nagoyajou"></a-sky>
+
+			<a-entity template="src: #link" position="0 -1 -4" data-thumb="#navi_back"></a-entity>
+
 			<a-entity camera look-controls>
 				<a-cursor id="cursor"
 				animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"

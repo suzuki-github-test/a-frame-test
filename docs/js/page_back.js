@@ -6,7 +6,6 @@ AFRAME.registerComponent
 			this.el.addEventListener("click",function()
 			{ 
 				history.back();
-				
 			});
 		}
 	}
